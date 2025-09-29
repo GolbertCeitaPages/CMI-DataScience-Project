@@ -142,9 +142,48 @@ def create_tables(year):
     # Post processing to round the table
     big_table_df["player_age"] = round(big_table_df["player_age"],0)
 
-    # create folder if it doesn't exist
+    # create folder if it does not exist
     os.makedirs("atp_transformed", exist_ok=True)
 
-    big_table_df.to_csv(Path(__file__).resolve().parent / "atp_transformed" / f"{year}.csv",index=False)
+    #big_table_df.to_csv(Path(__file__).resolve().parent / "atp_transformed" / f"{year}.csv",index=False)
+    return big_table_df
 
-create_tables(2024)
+# tool to make statements for all matches of a specific time period
+# list_of_dfs = []
+
+# for y in range(2000,2025):
+#     if y not in [2020,2021]:
+#         print(f"df_{y} = create_tables({y})")
+#         list_of_dfs.append(f"df_{y}")
+# print(f"df_big = pd.concat({list_of_dfs})")
+
+df_2000 = create_tables(2000)
+df_2001 = create_tables(2001)
+df_2002 = create_tables(2002)
+df_2003 = create_tables(2003)
+df_2004 = create_tables(2004)
+df_2005 = create_tables(2005)
+df_2006 = create_tables(2006)
+df_2007 = create_tables(2007)
+df_2008 = create_tables(2008)
+df_2009 = create_tables(2009)
+df_2010 = create_tables(2010)
+df_2011 = create_tables(2011)
+df_2012 = create_tables(2012)
+df_2013 = create_tables(2013)
+df_2014 = create_tables(2014)
+df_2015 = create_tables(2015)
+df_2016 = create_tables(2016)
+df_2017 = create_tables(2017)
+df_2018 = create_tables(2018)
+df_2019 = create_tables(2019)
+df_2020 = create_tables(2020)
+df_2021 = create_tables(2021)
+df_2022 = create_tables(2022)
+df_2023 = create_tables(2023)
+df_2024 = create_tables(2024)
+df_big = pd.concat([df_2000, df_2001, df_2002, df_2003, df_2004, df_2005, df_2006, df_2007, df_2008, df_2009, df_2010, df_2011, df_2012, df_2013, df_2014, df_2015, df_2016, df_2017, df_2018, df_2019,df_2020,df_2021, df_2022, df_2023, df_2024])
+
+df_big["tourney_date"] = pd.to_datetime(df_big["tourney_date"].astype(str), format="%Y%m%d")
+
+df_big.to_csv(Path(__file__).resolve().parent / "atp_transformed" / f"2000-2024 with covid.csv",index=False)
