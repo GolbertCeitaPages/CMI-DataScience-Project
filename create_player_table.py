@@ -18,9 +18,9 @@ w_ace,w_df,w_svpt,w_1stIn,w_1stWon,w_2ndWon,w_SvGms,w_bpSaved,w_bpFaced
 def create_tables(year):
     
     # load all datasets of given year
-    atp_matches_df = pd.read_csv(Path(__file__).resolve().parent / "atp_matches" / f"atp_matches_{year}.csv")
-    atp_qual_chall_df = pd.read_csv(Path(__file__).resolve().parent / "atp_qual_chall" / f"atp_matches_qual_chall_{year}.csv")
-    atp_futures_df = pd.read_csv(Path(__file__).resolve().parent / "atp_futures" / f"atp_matches_futures_{year}.csv")
+    atp_matches_df = pd.read_csv(Path(__file__).resolve().parent / "atp_dataset" / f"atp_matches_{year}.csv")
+    atp_qual_chall_df = pd.read_csv(Path(__file__).resolve().parent / "atp_dataset" / f"atp_matches_qual_chall_{year}.csv")
+    atp_futures_df = pd.read_csv(Path(__file__).resolve().parent / "atp_dataset" / f"atp_matches_futures_{year}.csv")
 
     # Add the tournament type to all rows
     atp_matches_df["tourney_type"] = "matches"
@@ -186,4 +186,4 @@ df_big = pd.concat([df_2000, df_2001, df_2002, df_2003, df_2004, df_2005, df_200
 
 df_big["tourney_date"] = pd.to_datetime(df_big["tourney_date"].astype(str), format="%Y%m%d")
 
-df_big.to_csv(Path(__file__).resolve().parent / "atp_transformed" / f"2000-2024 with covid.csv",index=False)
+df_big.to_csv(Path(__file__).resolve().parent / "atp_transformed" / f"2000-2024_complete.csv",index=False)

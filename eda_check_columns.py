@@ -20,7 +20,7 @@ def check_columns(folder_name):
     print(f"Total rows in csvs from the {folder_name} folder: {total_rows}")
 
 
-check_columns("atp_doubles")
-check_columns("atp_futures")
-check_columns("atp_matches")
-check_columns("atp_qual_chall")
+#check_columns("atp_doubles")
+#check_columns("atp_futures")
+#check_columns("atp_matches")
+#check_columns("atp_qual_chall")
