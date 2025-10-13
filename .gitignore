@@ -4,12 +4,7 @@ tennis analysis.pbix
 22-09-2025 EDA in excel.xlsx
 
 # datasets (raw)
-atp_matches_doubles_[0-9][0-9][0-9][0-9].csv
-atp_matches_futures_[0-9][0-9][0-9][0-9].csv
-atp_matches_[0-9][0-9][0-9][0-9].csv
-atp_matches_qual_chall_[0-9][0-9][0-9][0-9].csv
-atp_rankings_[0-9][0-9]s.csv
-atp_rankings_[0-9][0-9][0-9][0-9].csv
+atp_sources
 atp_matches_amateur.csv
 
 # enrichment
@@ -20,5 +15,4 @@ check_atp*
 atp_transformed/2024.csv
 
 # misc
-golbert_notes.txt
 .env
