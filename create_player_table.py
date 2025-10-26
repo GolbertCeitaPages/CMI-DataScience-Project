@@ -186,4 +186,4 @@ df_big = pd.concat([df_2000, df_2001, df_2002, df_2003, df_2004, df_2005, df_200
 
 df_big["tourney_date"] = pd.to_datetime(df_big["tourney_date"].astype(str), format="%Y%m%d")
 
-df_big.to_csv(Path(__file__).resolve().parent / "atp_transformed" / f"2000-2024_complete.csv",index=False)
+df_big.to_csv(Path(__file__).resolve().parent / "atp_transformed" / "2000-2024 with covid.csv",index=False)
