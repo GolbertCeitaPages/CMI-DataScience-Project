@@ -18,6 +18,9 @@ static_data
 # transformed
 check_atp*
 atp_transformed/2024.csv
+atp_transformed/2000-2024 with covid.csv
+atp_player_stats/player_stats.csv
+remaining.
 
 # misc
 golbert_notes.txt
