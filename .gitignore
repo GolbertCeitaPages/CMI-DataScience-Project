@@ -14,6 +14,12 @@ static_data
 check_atp*
 atp_transformed/2024.csv
 atp_transformed
+atp_transformed/2000-2024 with covid.csv
+atp_player_stats/player_stats.csv
+2000-2024 with player stats.csv
+2000-2024 without player stats.csv
+player_elos.csv
+remaining.
 
 # misc
 .env
