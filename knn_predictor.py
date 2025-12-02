@@ -15,14 +15,14 @@ full_df = pd.read_csv('atp_transformed/2000-2024 players_2.csv')
 
 selected_features = ['surface', 
 'tourney_level', 
-#'tourney_date', 
+#'tourney_date', dropped because not numeric 
 'match_num', 
 'player_seed', 
 'player_height', 
 'player_country', 
 'player_age', 
-'elo_pre_match', 
-'opponent_elo_pre_match', 
+#'elo_pre_match', dropped because of leakage
+#'opponent_elo_pre_match', 
 'opponent_rank', 
 'mean_numb', 
 'median_numb', 
@@ -54,8 +54,8 @@ selected_features = ['surface',
 'service_games_rolling_mean_10', 
 'break_points_saved_rolling_mean_10', 
 'break_points_faced_rolling_mean_10', 
-'elo_pre_match_rolling_mean_10', 
-'opponent_elo_pre_match_rolling_mean_10', 
+# 'elo_pre_match_rolling_mean_10', dropped because of leakage
+# 'opponent_elo_pre_match_rolling_mean_10', 
 'set_dominance_rolling_mean_10', 
 'tb_dominance_rolling_mean_10', 
 'player_rank_rolling_mean_10', 
