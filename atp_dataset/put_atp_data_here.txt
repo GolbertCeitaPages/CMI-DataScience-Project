@@ -1,6 +1,0 @@
-Copy paste all csv files here:
-atp_matches_2020 through atp_matches_2024
-atp_matches_futures_2000 through atp_matches_futures_2024
-atp_matches_qual_chall_2000 through atp_matches_qual_chall_2024
-
-This includes 1289981 rows of data.
